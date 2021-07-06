@@ -1,5 +1,14 @@
+import game.WordList
+
 fun main(args: Array<String>) {
-menu()
+//menu()
+    var list = WordList()
+    list.ReadList()
+    println(list.ChooseRandomWord())
+    println(list.ChooseRandomWord())
+    println(list.ChooseRandomWord())
+    println(list.ChooseRandomWord())
+    println(list.ChooseRandomWord())
 }
 
 fun menu() {
@@ -26,5 +35,5 @@ fun menu() {
     println("")
     println("")
     println("")
-    
+
 }
