@@ -17,7 +17,7 @@ class GameWord {
         }
 
         while(remainingTries > 0) {
-            if('_' !in underScores) {
+            if ('_' !in underScores) {
                 println("Congratulations! You won! The word was $gameWord .")
                 points = underScores.size
                 println("You receive $points points.")
@@ -31,7 +31,9 @@ class GameWord {
             println("Your word looks like this so far: $underScores")
             println("Which letter do you choose? ")
             var choice = input.nextLine().toLowerCase().single()
-            if(choice in usedChars) {
+            if(choice == null) {
+                println("Please chose a letter first, then hit enter...")
+            } else if(choice in usedChars) {
                 println("You have already used this letter. Please choose another!")
             } else if(choice !in word) {
                 remainingTries -= 1

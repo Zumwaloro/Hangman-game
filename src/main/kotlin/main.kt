@@ -1,11 +1,15 @@
+import game.GameSequence
+import game.HighScores
 import game.WordList
+import java.util.*
 
 fun main(args: Array<String>) {
-menu()
-
+    menu()
 }
 
 fun menu() {
+    var highScores = HighScores()
+    val input = Scanner(System.`in`)
 
     println("")
     println("")
@@ -29,5 +33,30 @@ fun menu() {
     println("")
     println("")
     println("")
+
+    println("Menu choice: ")
+    var choice = input.nextInt()
+    when(choice) {
+        1 -> {
+            println("")
+            println("What is your name? ")
+            var name = input.nextLine()
+            var game = GameSequence(name)
+            game.start()
+            highScores.SetSequence(game)
+            println("")
+            menu()
+        }
+        2 -> {
+            println("")
+            highScores.DisplayHighScores()
+            println("")
+            menu()
+        }
+        3 -> {
+            println("")
+            println("Goodbye!")
+        }
+    }
 
 }
