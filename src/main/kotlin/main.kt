@@ -1,14 +1,8 @@
 import game.WordList
 
 fun main(args: Array<String>) {
-//menu()
-    var list = WordList()
-    list.ReadList()
-    println(list.ChooseRandomWord())
-    println(list.ChooseRandomWord())
-    println(list.ChooseRandomWord())
-    println(list.ChooseRandomWord())
-    println(list.ChooseRandomWord())
+menu()
+
 }
 
 fun menu() {
