@@ -20,7 +20,7 @@ class HighScores {
                 println("Place: ${index+1}")
                 println("Name: ${score.name}")
                 println("Total points: ${score.totalPoints}")
-                println("Number of games: ${score.numberOfgames}")
+                println("Number of games won: ${score.numberOfgames}")
                 println("")
             }
         }
