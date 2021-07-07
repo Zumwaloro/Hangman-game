@@ -30,10 +30,13 @@ class GameWord {
             }
             println("Your word looks like this so far: $underScores")
             println("Which letter do you choose? ")
-            var choice = input.nextLine().toLowerCase().single()
-            if(choice == null) {
+            var input = input.nextLine()
+            if(input == null || input.equals("")) {
                 println("Please chose a letter first, then hit enter...")
-            } else if(choice in usedChars) {
+                continue
+            }
+            var choice = input.toLowerCase().single()
+            if(choice in usedChars) {
                 println("You have already used this letter. Please choose another!")
             } else if(choice !in word) {
                 remainingTries -= 1
