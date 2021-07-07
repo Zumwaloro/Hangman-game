@@ -1,6 +1,5 @@
 import game.GameSequence
 import game.HighScores
-import game.WordList
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -35,9 +34,9 @@ fun menu() {
     println("")
 
     println("Menu choice: ")
-    var choice = input.nextInt()
+    var choice = input.nextLine()
     when(choice) {
-        1 -> {
+        "1" -> {
             println("")
             println("What is your name? ")
             var name = input.nextLine()
@@ -47,13 +46,13 @@ fun menu() {
             println("")
             menu()
         }
-        2 -> {
+        "2" -> {
             println("")
             highScores.DisplayHighScores()
             println("")
             menu()
         }
-        3 -> {
+        else -> {
             println("")
             println("Goodbye!")
         }

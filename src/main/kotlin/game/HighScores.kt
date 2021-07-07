@@ -3,9 +3,9 @@ package game
 class HighScores {
     var scores = mutableListOf<GameSequence>()
 
-    //TODO: sort the highscores
     fun SetSequence(sequence: GameSequence) {
-       scores.add(sequence)
+        scores.add(sequence)
+        scores.sortByDescending { it.totalPoints }
     }
 
     fun DisplayHighScores() {
